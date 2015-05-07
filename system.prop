@@ -1,3 +1,37 @@
 ro.opengles.version = 131072
 wifi.interface=wlan0
 ro.sf.lcd_density=320
+
+#######################
+#Oggie7797.was.here=0##
+#######################
+##Time to add some lines bitches
+###I will be adding comment lines for documentation
+
+#Enable KSM for better memory management on this lower end board
+ro.ksm.default=
+
+#Enable nav bar since we dont have any hardware keys to use
+qemu.hw.mainkeys=0
+
+#Some extra wifi lines since the one provided isn't enough
+softap.interface=wlan0
+wifi.supplicant_scan_interval=60
+
+#Disable the radio even though there is not one so that android will think of us like a tablet
+ro.radio.noril=yes
+
+#Even though 5.x uses ART we still need Dalvik lines
+##These WILL need to be adjusted, using these from a device with similar specs as a reference
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=48m
+dalvik.vm.heapsize=160m
+dalvik.vm.heaptargetutilization=0.25
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=2m
+dalvik.vm.debug.alloc=0
+dalvik.vm.jit.codecachesize=0
+persist.sys.dalvik.vm.lib=libdvm.so
+dalvik.vm.lockprof.threshold=750
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+dalvik.vm.dexopt-flags=m=v,o=y
