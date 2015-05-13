@@ -9,7 +9,7 @@ ro.sf.lcd_density=320
 ###I will be adding comment lines for documentation
 
 #Enable KSM for better memory management on this lower end board
-ro.ksm.default=
+ro.ksm.default=0
 
 #Enable nav bar since we dont have any hardware keys to use
 qemu.hw.mainkeys=0
